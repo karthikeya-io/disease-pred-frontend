@@ -1,0 +1,18 @@
+.resultDiv {
+    width: 70%;
+    height: 50px;
+    margin: auto;
+    padding: 10px 25px;
+}
+
+
+.resultName {
+    float: left;
+}
+.options  {
+    float: right;
+    padding: 0px 20px;
+}
+.options label {
+    padding: 0 20px 0 5px ;
+}
