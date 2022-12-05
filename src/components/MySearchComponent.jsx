@@ -52,7 +52,7 @@ const MySearchComponent = () => {
         <div>
             <h2>Search for Diseases based on symptoms</h2>
             <form className="example" onSubmit={submitHandler}>
-                <input onChange={changeHandler} type="text" placeholder="Search.." name="search" />
+                <input value={formDetails.search} onChange={changeHandler} type="text" placeholder="Search.." name="search" />
                 <button type="submit"><i className="fa fa-search"></i></button>
             </form>
         </div>
