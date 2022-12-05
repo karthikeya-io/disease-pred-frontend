@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/Searchbar.css';
 import { useState } from 'react'
 
-const MySearchComponent = () => {
+const MySearchComponent = (props) => {
 
     const [formDetails, setFormDetails] = useState({ "search": "" })
     const changeHandler = (event) => {
@@ -45,6 +45,7 @@ const MySearchComponent = () => {
             .then((data) => {
                 console.log(data); // JSON data parsed by `data.json()` call
                 setFormDetails({ "search": "" });
+                props.print(data);
             });
     }
 
@@ -55,6 +56,7 @@ const MySearchComponent = () => {
                 <input onChange={changeHandler} type="text" placeholder="Search.." name="search" />
                 <button type="submit"><i className="fa fa-search"></i></button>
             </form>
+            
         </div>
     )
 }
