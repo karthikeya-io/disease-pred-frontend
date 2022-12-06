@@ -16,3 +16,7 @@
 .options label {
     padding: 0 20px 0 5px ;
 }
+
+.radio:hover {
+    cursor: pointer;
+}
