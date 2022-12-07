@@ -12,7 +12,7 @@ export default function Result(props) {
             name: name,
             value: value
         }
-        if (found == -1) {
+        if (found === -1) {
             array.push(feedbackDisease)
         }
         else {
@@ -51,6 +51,7 @@ export default function Result(props) {
             .then((data) => {
                 console.log(data); // JSON data parsed by `data.json()` call
                 array = []
+                props.fun(data);
             });
     }
     return (
