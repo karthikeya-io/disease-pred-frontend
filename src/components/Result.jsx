@@ -45,6 +45,10 @@ export default function Result(props) {
         const feedback = {
             arr: array
         }
+        if (array.length < 10) {
+            alert('give feedback for all items')
+            return
+        }
         alert(JSON.stringify(feedback))
         console.log(feedback);
         postData('http://localhost:4000/api/feedback', feedback)
@@ -65,7 +69,11 @@ export default function Result(props) {
                                 <div className="col-12">
                                     <div className="card resultDiv">
                                         <div className='card-text'>
+                                            <a  target="_blank" href={`https://www.drugs.com/health-guide/${res._source.disease}.html`}>
+
                                             <span className='resultName'>{res._source.disease}</span>
+                                            </a>
+                                            
                                             <span className='options'>
                                                 <input onChange={feedbackHandler} className='radio' type="radio" value='yes' name={res._source.disease}  />
                                                 <label htmlFor="yes">Yes</label>
