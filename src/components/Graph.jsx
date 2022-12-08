@@ -27,7 +27,32 @@ export default function Graph(props) {
             <h2>Recall : {props.data.recall[r-1]}</h2>
             <h2>f1 score : {props.data.f1}</h2>
             {/* <Line data = {data}/> */}
+            <h2>11 point interpolated precision</h2>
 
+            <div >
+                <div style={{margin: "5px 580px 0 580px"}}>
+                <div style={{float: 'left'}}>
+                <h3>Precision</h3>
+                {
+                    props.data.precision.map((p) => {
+                        return (
+                            <span><h5>{p} </h5> </span>
+                        )
+                    })
+                }
+                </div>
+                <div style={{float: 'right'}}>
+                <h3>Recall</h3>
+                {
+                    props.data.recall.map((r) => {
+                        return (
+                            <span><h5>{r}</h5>  </span>
+                        )
+                    })
+                }
+                </div>
+                </div>
+            </div>
 
         </div>
     )
